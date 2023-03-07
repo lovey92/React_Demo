@@ -1,3 +1,10 @@
+/*
+This file consists of test case for showing image list from axios api.
+I have created sample test case. 
+*/
+
+
+
 import axios from "axios";
 import MockAdapter from "axios-mock-adapter";
 import { default as imageResponse } from '../mocks/imageResponse.json';

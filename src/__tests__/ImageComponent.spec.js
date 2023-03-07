@@ -1,3 +1,9 @@
+/*
+This file consists of test case for delete image from image list component.
+I have created sample test case. 
+*/
+
+
 import { default as deleteImageJson } from '../mocks/deleteImage.json';
 import { default as imageJson } from '../mocks/imageResponse.json';
 import { imageReducer } from '../redux/reducers/imageReducer';
