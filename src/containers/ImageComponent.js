@@ -17,7 +17,6 @@ const handleInputChange = (e) => {
 }
 
 const handleButtonSearch = () => {
-    console.log("process.env.REACT_APP_SEARCH_API_URL : ", process.env.REACT_APP_SEARCH_API_URL);
   axios.get(`${process.env.REACT_APP_SEARCH_API_URL}${searchValue}&page=1&client_id=${process.env.REACT_APP_CLIENT_ID}`)
     .then(response => {
         dispatch(searchImages(response.data.results));
@@ -43,12 +42,12 @@ const dltImage = (imageId) => {
 }
 
 const renderList = images.map((image) => {
-    const id  = image.id;
+    const id        = image.id;
     const image_url = image.urls.full;
     const title     = image.alt_description;
     
     return (
-            updateState === image.id ? <EditImageComponent current={image} imageList={images}  onSubmit={handleSubmit} /> :
+            updateState === id ? <EditImageComponent current={image} imageList={images}  onSubmit={handleSubmit} /> :
                 <div key={id} className="imageCard">
                     <div className="img-title"> {title} </div>
                     <LazyLoadImage src={image_url} alt={title} className="image-url" loading="lazy" />
