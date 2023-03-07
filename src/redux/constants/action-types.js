@@ -1,0 +1,6 @@
+export const ActionTypes = {
+    SEARCH_IMAGES : "SEARCH_IMAGES",
+    DELETE_IMAGE : "DELETE_IMAGE",
+    UPDATE_IMAGE : "UPDATE_IMAGE",
+    SET_IMAGES : "SET_IMAGES"
+};
